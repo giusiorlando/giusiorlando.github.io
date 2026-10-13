@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Giusi Orlando — Communication, Branding, Visual Design</title>
+<meta name="description" content="Giusi Orlando, Brand & Communication Manager a Verona. Communication, branding, visual design e content creation.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Giusi Orlando — Communication & Branding">
+<meta property="og:description" content="Communication, branding, visual design e content creation.">
+<meta property="og:image" content="assets/img/og.jpg">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1B2733">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%231B2733'/%3E%3Ctext x='32' y='46' font-family='Arial Black,sans-serif' font-style='italic' font-weight='900' font-size='38' text-anchor='middle' fill='%23CFEA52'%3EG%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,400..900;1,62..125,400..900&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1B2733;
+    --navy-2: #233140;
+    --navy-line: #34465A;
+    --acid: #CFEA52;
+    --white: #F3F6F9;      /* bianco freddo */
+    --white-2: #E6ECF2;
+    --paper: #FFFFFF;
+    --ink: #1B2733;
+    --ink-soft: #566472;
+    --line: #D3DCE5;
+    --on-navy: #EEF2F6;
+    --on-navy-soft: #A6B3C1;
+    --display: "Archivo", "Arial Black", sans-serif;
+    --sans: "DM Sans", system-ui, sans-serif;
+    --mono: "Space Mono", ui-monospace, monospace;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--white); color: var(--ink); font-family: var(--sans); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+  .mono { font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
+  .display { font-family: var(--display); font-stretch: 125%; font-weight: 900; text-transform: uppercase; line-height: .92; letter-spacing: -.01em; }
+
+  /* ---------- Header ---------- */
+  header { position: sticky; top: 0; z-index: 20; background: var(--navy); color: var(--on-navy); border-bottom: 1px solid transparent; transition: border-color .3s; }
+  header.scrolled { border-bottom-color: var(--navy-line); }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+  .brand { text-decoration: none; display: flex; align-items: center; gap: 14px; }
+  .brand-bar { width: 3px; height: 34px; background: var(--acid); }
+  .brand-name { font-family: var(--display); font-stretch: 112%; font-weight: 800; font-style: italic; text-transform: uppercase; line-height: 1; color: var(--acid); font-size: 15px; }
+  .brand-name b { display: block; font-weight: 900; }
+  .nav ul { display: flex; gap: 28px; list-style: none; }
+  .nav ul a { text-decoration: none; color: var(--on-navy-soft); transition: color .2s; }
+  .nav ul a:hover { color: var(--acid); }
+  .menu-btn { display: none; background: none; border: 1px solid var(--on-navy-soft); color: var(--on-navy); width: 42px; height: 42px; border-radius: 8px; font-size: 18px; cursor: pointer; }
+
+  /* ---------- Hero ---------- */
+  .hero { background: var(--navy); color: var(--on-navy); position: relative; overflow: hidden; }
+  .hero .wrap { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr); gap: 56px; align-items: center; padding-top: 72px; padding-bottom: 88px; }
+  .hello { display: flex; align-items: center; gap: 12px; color: var(--acid); margin-bottom: 28px; }
+  .star { width: 22px; height: 22px; flex: none; animation: spin 14s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .hero h1 { font-size: clamp(34px, 5.4vw, 68px); color: var(--white); }
+  .hero h1 span { display: block; }
+  .hero h1 span:nth-child(even) { color: transparent; -webkit-text-stroke: 1.5px var(--white); }
+  .hero .lead { font-size: 19px; color: var(--on-navy-soft); max-width: 560px; margin-top: 36px; }
+  .hero .lead strong { color: var(--on-navy); font-weight: 500; }
+  .actions { display: flex; flex-wrap: wrap; gap: 14px; }
+  .btn { display: inline-flex; align-items: center; gap: 10px; padding: 16px 26px; border-radius: 999px; text-decoration: none; font-family: var(--mono); font-size: 13px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; transition: transform .2s, background .2s, color .2s; }
+  .btn:hover { transform: translateY(-2px); }
+  .btn-acid { background: var(--acid); color: var(--navy); }
+  .btn-acid:hover { background: var(--white); }
+  .btn-ghost { border: 1px solid var(--on-navy-soft); color: var(--on-navy); }
+  .btn-ghost:hover { border-color: var(--acid); color: var(--acid); }
+
+  .portrait { position: relative; width: 100%; max-width: 260px; justify-self: end; }
+  .portrait::before { content: ""; position: absolute; inset: 14px -14px -14px 14px; border: 2px solid var(--acid); }
+  .portrait img { position: relative; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; display: block; }
+
+  /* ---------- Marquee band ---------- */
+  .band { background: var(--acid); color: var(--navy); overflow: hidden; white-space: nowrap; padding: 14px 0; }
+  .band-track { display: inline-flex; animation: marquee 32s linear infinite; }
+  .band-track span { font-family: var(--display); font-stretch: 112%; font-weight: 800; text-transform: uppercase; font-size: clamp(20px, 2.6vw, 32px); padding: 0 18px; display: inline-flex; align-items: center; gap: 36px; }
+  .band-track span::after { content: "✺"; font-size: .8em; }
+  @keyframes marquee { to { transform: translateX(-50%); } }
+
+  /* ---------- Sections ---------- */
+  section { padding: 112px 0; }
+  .label { display: inline-block; background: var(--acid); color: var(--navy); font-family: var(--display); font-stretch: 112%; font-weight: 900; text-transform: uppercase; font-size: 15px; padding: 8px 16px; border-radius: 8px; margin-bottom: 24px; }
+  h2 { font-size: clamp(36px, 5.4vw, 72px); margin-bottom: 20px; }
+  h2 .out { color: transparent; -webkit-text-stroke: 1.5px var(--ink); }
+  .dark h2 .out { -webkit-text-stroke-color: var(--white); }
+  .intro { color: var(--ink-soft); max-width: 640px; font-size: 18px; }
+  .dark { background: var(--navy); color: var(--on-navy); }
+  .dark .intro { color: var(--on-navy-soft); }
+  .dark h2 { color: var(--white); }
+
+  /* About */
+  .about { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
+  .about p { font-size: 19px; color: var(--ink-soft); margin-bottom: 20px; }
+  .about p strong { color: var(--ink); font-weight: 700; }
+  .about blockquote { font-family: var(--display); font-stretch: 100%; font-weight: 700; font-size: clamp(24px, 2.6vw, 32px); line-height: 1.2; border-left: 4px solid var(--acid); padding-left: 24px; margin-top: 8px; }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 40px; }
+  .stat { background: var(--paper); border: 1px solid var(--line); border-radius: 16px; padding: 22px; }
+  .stat b { font-family: var(--display); font-stretch: 125%; font-weight: 900; font-size: 40px; line-height: 1; display: block; margin-bottom: 8px; }
+  .stat span { color: var(--ink-soft); font-size: 14px; }
+
+  /* Work */
+  .work-head { display: flex; justify-content: space-between; align-items: end; gap: 32px; flex-wrap: wrap; margin-bottom: 48px; }
+
+  .projects { display: grid; gap: 0; }
+  .project { padding: 56px 0; border-top: 1px solid var(--navy-line); }
+  .project:first-child { border-top: none; padding-top: 0; }
+  .project-head { max-width: 720px; margin-bottom: 28px; }
+  .project .tag { color: var(--acid); margin-bottom: 10px; }
+  .project h3 { font-family: var(--display); font-stretch: 112%; font-weight: 800; text-transform: uppercase; font-size: clamp(24px, 2.6vw, 32px); line-height: 1.05; color: var(--white); margin-bottom: 10px; }
+  .project p { color: var(--on-navy-soft); font-size: 16px; }
+
+  /* Static image strips: images side by side, same height per row */
+  .strip { display: flex; gap: 12px; margin-top: 12px; }
+  .strip img { flex: var(--r) 1 0; min-width: 0; height: auto; aspect-ratio: var(--ar); object-fit: cover; border-radius: 10px; background: var(--navy-2); }
+
+  /* Photography (masonry) */
+  .gallery { columns: 4; column-gap: 14px; margin-top: 24px; }
+  .gallery img { width: 100%; border-radius: 12px; margin-bottom: 14px; break-inside: avoid; }
+  .gallery-title { display: flex; justify-content: space-between; align-items: baseline; margin-top: 88px; color: var(--on-navy-soft); gap: 16px; flex-wrap: wrap; }
+  .gallery-title h3 { font-family: var(--display); font-stretch: 112%; font-weight: 800; text-transform: uppercase; color: var(--white); font-size: clamp(28px, 3.4vw, 40px); }
+
+  /* Experience */
+  .featured { background: var(--navy); color: var(--on-navy); border-radius: 24px; padding: 48px; display: grid; grid-template-columns: .9fr 1.1fr; gap: 56px; margin: 48px 0 24px; position: relative; overflow: hidden; }
+  .featured::after { content: ""; position: absolute; right: -60px; top: -60px; width: 200px; height: 200px; border: 18px solid var(--acid); border-radius: 50%; opacity: .9; }
+  .featured .when { color: var(--acid); margin-bottom: 14px; }
+  .featured h3 { font-size: clamp(32px, 3.6vw, 48px); color: var(--white); margin-bottom: 10px; }
+  .featured .role { color: var(--on-navy-soft); }
+  .featured ul { list-style: none; display: grid; gap: 16px; position: relative; z-index: 1; }
+  .featured li { padding-left: 30px; position: relative; color: var(--on-navy-soft); }
+  .featured li strong { color: var(--on-navy); font-weight: 500; }
+  .featured li::before { content: "✺"; position: absolute; left: 0; color: var(--acid); }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
+  .chip { border: 1px solid var(--navy-line); border-radius: 999px; padding: 6px 12px; color: var(--on-navy-soft); font-size: 11px; }
+
+  .past { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .past article { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 26px; }
+  .past .when { color: var(--ink-soft); margin-bottom: 10px; }
+  .past h4 { font-family: var(--display); font-stretch: 112%; font-weight: 800; text-transform: uppercase; font-size: 20px; line-height: 1.1; }
+  .past .role { color: var(--ink); background: var(--acid); display: inline-block; padding: 2px 8px; border-radius: 4px; margin: 10px 0 12px; font-size: 11px; }
+  .past p { color: var(--ink-soft); font-size: 15px; }
+
+  /* Skills */
+  .skills { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 48px; }
+  .skill { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 30px; transition: background .25s, color .25s, border-color .25s; }
+  .skill:hover { background: var(--navy); color: var(--on-navy); border-color: var(--navy); }
+  .skill:hover p { color: var(--on-navy-soft); }
+  .skill .n { color: var(--ink-soft); margin-bottom: 36px; display: flex; justify-content: space-between; }
+  .skill:hover .n { color: var(--acid); }
+  .skill h3 { font-family: var(--display); font-stretch: 112%; font-weight: 800; text-transform: uppercase; font-size: 20px; line-height: 1.1; margin-bottom: 10px; }
+  .skill p { color: var(--ink-soft); font-size: 15px; transition: color .25s; }
+  .tools { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 40px; }
+  .tool { background: var(--navy); color: var(--on-navy); padding: 10px 18px; border-radius: 999px; font-size: 14px; }
+  .tool.ai { background: var(--acid); color: var(--navy); font-weight: 700; }
+
+  /* Education */
+  .edu { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; margin-top: 48px; }
+  .edu h3 { margin-bottom: 16px; color: var(--ink-soft); }
+  .row { display: grid; grid-template-columns: 120px 1fr; gap: 16px; padding: 18px 0; border-top: 1px solid var(--line); }
+  .row .when { color: var(--ink-soft); padding-top: 3px; }
+  .row strong { font-weight: 700; display: block; }
+  .row span { color: var(--ink-soft); font-size: 15px; }
+
+  /* Contact */
+  .contact { padding-bottom: 0; }
+  .contact h2 { font-size: clamp(44px, 7vw, 96px); }
+  .mail { display: inline-block; margin-top: 40px; font-family: var(--display); font-stretch: 100%; font-weight: 700; font-size: clamp(22px, 3.6vw, 44px); color: var(--white); text-decoration: none; border-bottom: 2px solid var(--acid); word-break: break-word; transition: color .2s; }
+  .mail:hover { color: var(--acid); }
+  .contact .actions { margin: 40px 0 112px; }
+  .end { background: var(--acid); color: var(--navy); }
+  .end .wrap { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; padding-top: 18px; padding-bottom: 18px; }
+  .end .sig { font-family: var(--display); font-stretch: 112%; font-weight: 900; text-transform: uppercase; font-size: 24px; }
+  .end .sig i { font-weight: 500; }
+  .end a { text-decoration: none; }
+
+  /* Reveal */
+  .js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
+  .js .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .js .reveal { opacity: 1; transform: none; transition: none; }
+    .band-track, .star { animation: none; }
+  }
+
+  /* Responsive */
+  @media (max-width: 960px) {
+    .hero .wrap { grid-template-columns: 1fr; padding-top: 48px; padding-bottom: 72px; gap: 56px; }
+    .portrait { justify-self: start; max-width: 200px; }
+    .about, .edu { grid-template-columns: 1fr; gap: 40px; }
+    .featured { grid-template-columns: 1fr; gap: 28px; padding: 32px; }
+    .past, .skills { grid-template-columns: 1fr 1fr; }
+    .gallery { columns: 3; }
+
+    section { padding: 80px 0; }
+  }
+  @media (max-width: 760px) {
+    .wrap { padding: 0 16px; }
+    .menu-btn { display: block; }
+    .nav ul { display: none; position: absolute; top: 68px; left: 0; right: 0; flex-direction: column; gap: 0; background: var(--navy); border-bottom: 1px solid var(--navy-line); padding: 8px 16px 16px; }
+    .nav ul.open { display: flex; }
+    .nav ul a { display: block; padding: 12px 0; font-size: 13px; }
+    .past, .skills { grid-template-columns: 1fr; }
+    .stats { grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+    .stat { padding: 16px; }
+    .stat b { font-size: 28px; }
+    .gallery { columns: 2; column-gap: 10px; }
+    .gallery img { margin-bottom: 10px; }
+    .strip { overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 6px; }
+    .strip img { flex: none; height: 240px; width: auto; scroll-snap-align: start; }
+    .project { padding: 40px 0; }
+    .row { grid-template-columns: 1fr; gap: 4px; }
+    .featured { padding: 26px; }
+    .hero h1 { font-size: 9vw; font-stretch: 100%; }
+    .hero h1 span:nth-child(even) { -webkit-text-stroke-width: 1px; }
+  }
+</style>
+</head>
+<body id="top">
+<script>document.documentElement.classList.add('js');</script>
+
+<header id="header">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Giusi Orlando, torna su"><span class="brand-bar"></span><span class="brand-name">Giusi<b>Orlando</b></span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Apri il menu" aria-expanded="false">☰</button>
+    <ul id="menu" class="mono">
+      <li><a href="#chi-sono">Chi sono</a></li>
+      <li><a href="#lavori">Lavori</a></li>
+      <li><a href="#percorso">Percorso</a></li>
+      <li><a href="#competenze">Competenze</a></li>
+      <li><a href="#contatti">Contatti</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <p class="hello mono">
+          <svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path fill="#CFEA52" d="M12 0l2.1 5.2L19 2.5l-1.6 5.4L23 9.5l-4.6 3.2 3.4 4.5-5.6-.2.3 5.6L12 19.3l-4.5 3.3.3-5.6-5.6.2 3.4-4.5L1 9.5l5.6-1.6L5 2.5l4.9 2.7z"/></svg>
+          Brand &amp; Communication Manager · Verona
+        </p>
+        <h1 class="display"><span>Communication</span><span>Branding</span><span>Visual design</span><span>Content</span></h1>
+        <p class="lead">Sono <strong>Giusi</strong>. Mi occupo di comunicazione aziendale da oltre dieci anni: brand identity, contenuti, campagne ed eventi, <strong>dalla strategia all'esecuzione</strong>.</p>
+      </div>
+      <figure class="portrait">
+        <img src="assets/img/foto-square.jpg" alt="Ritratto di Giusi Orlando" width="522" height="522">
+      </figure>
+    </div>
+  </div>
+
+  <div class="band" aria-hidden="true">
+    <div class="band-track">
+      <span>Communication</span><span>Branding</span><span>Visual design</span><span>Content</span>
+      <span>Communication</span><span>Branding</span><span>Visual design</span><span>Content</span>
+    </div>
+  </div>
+
+  <!-- CHI SONO -->
+  <section id="chi-sono">
+    <div class="wrap about">
+      <div class="reveal">
+        <span class="label">Chi sono</span>
+        <h2 class="display">Forma <span class="out">e</span> strategia.</h2>
+        <blockquote>La comunicazione non è solo una questione di forma: è una scelta strategica.</blockquote>
+      </div>
+      <div class="reveal">
+        <p>Sono <strong>Giusi</strong> e vivo in provincia di Verona. Il mio percorso nasce dalla grafica pubblicitaria e da dieci anni prosegue nella comunicazione di una PMI vicentina: un'esperienza che mi ha insegnato a unire <strong>sensibilità visiva e visione di marketing</strong>.</p>
+        <p>Oggi guido i progetti di <strong>comunicazione aziendale</strong> dall'idea alla consegna: coordino i collaboratori esterni, organizzo fiere ed eventi e curo contenuti, social media e materiali pubblicitari e di vendita.</p>
+        <div class="stats">
+          <div class="stat"><b>10+</b><span>anni in comunicazione</span></div>
+          <div class="stat"><b>360°</b><span>dal brief all'evento</span></div>
+          <div class="stat"><b>AI</b><span>nel flusso creativo</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LAVORI -->
+  <section id="lavori" class="dark">
+    <div class="wrap">
+      <div class="work-head reveal">
+        <div>
+          <span class="label">Lavori</span>
+          <h2 class="display">Progetti <span class="out">selezionati</span></h2>
+          <p class="intro">Una selezione di progetti a cui ho lavorato negli ultimi anni, tra comunicazione aziendale, branding, fotografia e illustrazione.</p>
+        </div>
+      </div>
+
+      <div class="projects">
+        <article class="project reveal">
+          <div class="project-head"><p class="tag mono">VTN Europe · Visual identity</p><h3>Born to destroy</h3><p>Rendere il brand più attuale e distinguerlo dai competitor con colori, forme, linee e geometrie che richiamano il mondo construction.</p></div>
+          <div class="strip">
+            <img src="assets/img/identity-1.jpg" alt="Banner Born to Destroy" width="420" height="611" loading="lazy" style="--r:0.6874;--ar:420/611">
+            <img src="assets/img/identity-2.jpg" alt="Banner VTN con escavatore" width="419" height="611" loading="lazy" style="--r:0.6858;--ar:419/611">
+            <img src="assets/img/identity-3.jpg" alt="Banner Born to Destroy con pattern" width="416" height="611" loading="lazy" style="--r:0.6809;--ar:416/611">
+          </div>
+        </article>
+        <article class="project reveal">
+          <div class="project-head"><p class="tag mono">VTN Europe · Foto + AI</p><h3>Da prodotto statico a scena</h3><p>Fotografie reali di prodotto ambientate in cantiere con tool AI, per social e web.</p></div>
+          <div class="strip">
+            <img src="assets/img/ai-1.jpg" alt="The wall gets a vote" width="522" height="659" loading="lazy" style="--r:0.7921;--ar:522/659">
+            <img src="assets/img/ai-2.jpg" alt="Operatore in cabina con pinza VTN" width="521" height="659" loading="lazy" style="--r:0.7906;--ar:521/659">
+            <img src="assets/img/ai-3.jpg" alt="Built to bite back" width="521" height="649" loading="lazy" style="--r:0.8028;--ar:521/649">
+            <img src="assets/img/ai-4.jpg" alt="Pinza in azione su un edificio" width="440" height="464" loading="lazy" style="--r:0.9483;--ar:440/464">
+            <img src="assets/img/ai-5.jpg" alt="Targa VTN PD26" width="437" height="464" loading="lazy" style="--r:0.9418;--ar:437/464">
+          </div>
+        </article>
+        <article class="project reveal">
+          <div class="project-head"><p class="tag mono">VTN Europe · Visual ADV</p><h3>Unleash the crushing force</h3><p>Visual per social e web: fotografie reali gestite con tool AI e headline brevi e d'impatto.</p></div>
+          <div class="strip">
+            <img src="assets/img/adv-1.jpg" alt="Benna al tramonto" width="644" height="428" loading="lazy" style="--r:1.5047;--ar:644/428">
+            <img src="assets/img/adv-2.jpg" alt="Built to dig deeper" width="298" height="428" loading="lazy" style="--r:0.6963;--ar:298/428">
+            <img src="assets/img/adv-3.jpg" alt="One hand, total demolition" width="296" height="428" loading="lazy" style="--r:0.6916;--ar:296/428">
+            <img src="assets/img/adv-4.jpg" alt="Unleash the crushing force" width="688" height="428" loading="lazy" style="--r:1.6075;--ar:688/428">
+          </div>
+          <div class="strip">
+            <img src="assets/img/adv-5.jpg" alt="Unstoppable force" width="644" height="428" loading="lazy" style="--r:1.5047;--ar:644/428">
+            <img src="assets/img/adv-6.jpg" alt="Pressure perfectly aimed" width="298" height="428" loading="lazy" style="--r:0.6963;--ar:298/428">
+            <img src="assets/img/adv-7.jpg" alt="Wear is just proof of work" width="296" height="428" loading="lazy" style="--r:0.6916;--ar:296/428">
+            <img src="assets/img/adv-8.jpg" alt="Pressure is the point" width="296" height="428" loading="lazy" style="--r:0.6916;--ar:296/428">
+            <img src="assets/img/adv-9.jpg" alt="The crew outlasts the weather" width="325" height="428" loading="lazy" style="--r:0.7593;--ar:325/428">
+          </div>
+        </article>
+        <article class="project reveal">
+          <div class="project-head"><p class="tag mono">VTN Europe · Social</p><h3>News e articoli di settore</h3><p>Stories per divulgare cantieri e notizie, con un format grafico riconoscibile.</p></div>
+          <div class="strip">
+            <img src="assets/img/social-1.jpg" alt="Story: demolizione fabbrica ex-Nut" width="479" height="872" loading="lazy" style="--r:0.5493;--ar:479/872">
+            <img src="assets/img/social-2.jpg" alt="Story con pinza VTN" width="476" height="872" loading="lazy" style="--r:0.5459;--ar:476/872">
+            <img src="assets/img/social-3.jpg" alt="Story con pattern VTN" width="476" height="872" loading="lazy" style="--r:0.5459;--ar:476/872">
+            <img src="assets/img/social-4.jpg" alt="Story con prodotto in evidenza" width="476" height="872" loading="lazy" style="--r:0.5459;--ar:476/872">
+          </div>
+        </article>
+        <article class="project reveal">
+          <div class="project-head"><p class="tag mono">VTN Europe · Campagne</p><h3>Ogni presa è quella giusta</h3><p>Campagne pubblicitarie, brochure e materiali di vendita per le linee di prodotto.</p></div>
+          <div class="strip">
+            <img src="assets/img/campagne-2.jpg" alt="Brochure prodotto con pattern VTN" width="1068" height="900" loading="lazy" style="--r:1.1867;--ar:1068/900">
+            <img src="assets/img/campagne-1.jpg" alt="Volantino: Ogni presa è quella giusta" width="514" height="788" loading="lazy" style="--r:0.6523;--ar:514/788">
+            <img src="assets/img/campagne-3.jpg" alt="Brochure restyling MD 210" width="670" height="802" loading="lazy" style="--r:0.8354;--ar:670/802">
+          </div>
+        </article>
+        <article class="project reveal">
+          <div class="project-head"><p class="tag mono">VTN Europe · Eventi</p><h3>Eventi aziendali</h3><p>Organizzazione di eventi e fiere: location, allestimenti e materiali.</p></div>
+          <div class="strip">
+            <img src="assets/img/eventi-1.jpg" alt="Sala allestita sotto il portico" width="644" height="428" loading="lazy" style="--r:1.5047;--ar:644/428">
+            <img src="assets/img/eventi-2.jpg" alt="Segnaposto e centrotavola" width="296" height="428" loading="lazy" style="--r:0.6916;--ar:296/428">
+            <img src="assets/img/eventi-3.jpg" alt="Shopper Out of the box" width="294" height="428" loading="lazy" style="--r:0.6869;--ar:294/428">
+            <img src="assets/img/eventi-4.jpg" alt="Tavoli in giardino" width="688" height="428" loading="lazy" style="--r:1.6075;--ar:688/428">
+          </div>
+          <div class="strip">
+            <img src="assets/img/eventi-5.jpg" alt="Villa illuminata per l'evento VTN" width="644" height="428" loading="lazy" style="--r:1.5047;--ar:644/428">
+            <img src="assets/img/eventi-6.jpg" alt="Tavolo allestito nel cortile" width="647" height="428" loading="lazy" style="--r:1.5117;--ar:647/428">
+            <img src="assets/img/eventi-7.jpg" alt="Spettacolo davanti alla villa" width="688" height="428" loading="lazy" style="--r:1.6075;--ar:688/428">
+          </div>
+        </article>
+        <article class="project reveal">
+          <div class="project-head"><p class="tag mono">Oleo · Visual identity</p><h3>Naturalmente unico</h3><p>Identità visiva per una piccola realtà del Garda che produce olio artigianale: logo, pattern, palette e applicazioni.</p></div>
+          <div class="strip">
+            <img src="assets/img/oleo-2.jpg" alt="Logo Oleo" width="543" height="541" loading="lazy" style="--r:1.0037;--ar:543/541">
+            <img src="assets/img/oleo-1.jpg" alt="Oleo project tra gli ulivi" width="1200" height="1063" loading="lazy" style="--r:1.1289;--ar:1200/1063">
+            <img src="assets/img/oleo-4.jpg" alt="Logo Oleo su foto di ulivo" width="450" height="577" loading="lazy" style="--r:0.7799;--ar:450/577">
+          </div>
+          <div class="strip">
+            <img src="assets/img/oleo-3.jpg" alt="Brand board Oleo: logo, pattern, palette e font" width="1200" height="618" loading="lazy" style="--r:1.9417;--ar:1200/618">
+          </div>
+        </article>
+        <article class="project reveal">
+          <div class="project-head"><p class="tag mono">Cantina La Costa · Fotografia e materiale visivo</p><h3>Per i momenti che contano</h3><p>Fotografia e materiale visivo per la cantina, con un tono elegante e caldo.</p></div>
+          <div class="strip">
+            <img src="assets/img/lcsocial-1.jpg" alt="Tra i filari nel cuore dei Colli Euganei" width="601" height="939" loading="lazy" style="--r:0.6400;--ar:601/939">
+            <img src="assets/img/lcsocial-2.jpg" alt="Serprino, la nostra bollicina" width="642" height="939" loading="lazy" style="--r:0.6837;--ar:642/939">
+            <img src="assets/img/lcsocial-3.jpg" alt="Per i momenti che contano" width="625" height="932" loading="lazy" style="--r:0.6706;--ar:625/932">
+            <img src="assets/img/lcsocial-4.jpg" alt="Storie di terra e tradizione" width="637" height="999" loading="lazy" style="--r:0.6376;--ar:637/999">
+            <img src="assets/img/lcsocial-5.jpg" alt="Per i tuoi momenti più dolci" width="682" height="999" loading="lazy" style="--r:0.6827;--ar:682/999">
+            <img src="assets/img/lcsocial-6.jpg" alt="Dare inizio a tutto" width="689" height="989" loading="lazy" style="--r:0.6967;--ar:689/989">
+          </div>
+        </article>
+        <article class="project reveal">
+          <div class="project-head"><p class="tag mono">Fotografia · E-commerce</p><h3>Prima e dopo</h3><p>Editing e post-produzione per e-commerce, anche con AI: da uno scatto alla scrivania a una foto pronta per lo shop.</p></div>
+          <div class="strip">
+            <img src="assets/img/ecom-1.jpg" alt="Obiettivo Canon: prima e dopo" width="613" height="1028" loading="lazy" style="--r:0.5963;--ar:613/1028">
+            <img src="assets/img/ecom-2.jpg" alt="Occhiali: prima e dopo" width="613" height="1028" loading="lazy" style="--r:0.5963;--ar:613/1028">
+            <img src="assets/img/ecom-3.jpg" alt="Scatola Canon: prima e dopo" width="613" height="1028" loading="lazy" style="--r:0.5963;--ar:613/1028">
+            <img src="assets/img/ecom-4.jpg" alt="Occhiali indossati, generati con AI" width="613" height="1028" loading="lazy" style="--r:0.5963;--ar:613/1028">
+            <img src="assets/img/ecom-5.jpg" alt="Occhiali ambientati, generati con AI" width="613" height="1028" loading="lazy" style="--r:0.5963;--ar:613/1028">
+            <img src="assets/img/ecom-6.jpg" alt="Occhiali su fondo neutro" width="586" height="1023" loading="lazy" style="--r:0.5728;--ar:586/1023">
+          </div>
+        </article>
+        <article class="project reveal">
+          <div class="project-head"><p class="tag mono">Illustrazione</p><h3>Poster e città</h3><p>Poster dal segno geometrico, applicati anche su t-shirt e stampe, e luoghi iconici di Firenze e Vicenza reinterpretati.</p></div>
+          <div class="strip">
+            <img src="assets/img/ill-1.jpg" alt="Poster Mare aperto" width="636" height="903" loading="lazy" style="--r:0.7043;--ar:636/903">
+            <img src="assets/img/ill-2.jpg" alt="Poster Offline" width="627" height="903" loading="lazy" style="--r:0.6944;--ar:627/903">
+            <img src="assets/img/ill-3.jpg" alt="Poster Primavera" width="632" height="903" loading="lazy" style="--r:0.6999;--ar:632/903">
+            <img src="assets/img/ill-4.jpg" alt="Sun is out su t-shirt e stampa" width="1200" height="608" loading="lazy" style="--r:1.9737;--ar:1200/608">
+          </div>
+          <div class="strip">
+            <img src="assets/img/ill-6.jpg" alt="Duomo di Firenze a colori" width="596" height="870" loading="lazy" style="--r:0.6851;--ar:596/870">
+            <img src="assets/img/ill-5.jpg" alt="Duomo di Firenze incorniciato" width="880" height="865" loading="lazy" style="--r:1.0173;--ar:880/865">
+            <img src="assets/img/ill-8.jpg" alt="Stadio Romeo Menti di Vicenza" width="596" height="857" loading="lazy" style="--r:0.6954;--ar:596/857">
+            <img src="assets/img/ill-7.jpg" alt="Illustrazione di Vicenza incorniciata" width="618" height="857" loading="lazy" style="--r:0.7211;--ar:618/857">
+          </div>
+        </article>
+      </div>
+
+      <div class="gallery-title reveal">
+        <h3>Fotografia</h3>
+        <span class="mono">Cantina La Costa, Colli Euganei · Scatti personali</span>
+      </div>
+      <div class="gallery reveal">
+        <img src="assets/img/lacosta-1.jpg" alt="Bottiglia La Costa tra i tralci" loading="lazy">
+        <img src="assets/img/lacosta-2.jpg" alt="Serprino con rosa gialla" loading="lazy">
+        <img src="assets/img/lacosta-3.jpg" alt="Bottiglia su un palo della vigna" loading="lazy">
+        <img src="assets/img/lacosta-4.jpg" alt="Bottiglia su cassetta in vigna" loading="lazy">
+        <img src="assets/img/lacosta-5.jpg" alt="Serprino tra le foglie di vite" loading="lazy">
+        <img src="assets/img/lacosta-6.jpg" alt="Due viticoltori tra i filari" loading="lazy">
+        <img src="assets/img/lacosta-7.jpg" alt="Bottiglia 7 14 21 tra le viti" loading="lazy">
+        <img src="assets/img/viaggio-1.jpg" alt="Stampe esposte in un mercatino" loading="lazy">
+        <img src="assets/img/viaggio-2.jpg" alt="Strada in salita tra i grattacieli" loading="lazy">
+        <img src="assets/img/viaggio-3.jpg" alt="Casa su palafitte sul mare" loading="lazy">
+        <img src="assets/img/viaggio-4.jpg" alt="Palazzo color sabbia con scale antincendio" loading="lazy">
+        <img src="assets/img/viaggio-5.jpg" alt="Palazzo azzurro con finestre bianche" loading="lazy">
+        <img src="assets/img/viaggio-6.jpg" alt="Facciate di palazzi storici" loading="lazy">
+        <img src="assets/img/viaggio-7.jpg" alt="Lanterne rosse a Chinatown" loading="lazy">
+        <img src="assets/img/viaggio-8.jpg" alt="Negozio a Chinatown" loading="lazy">
+        <img src="assets/img/viaggio-9.jpg" alt="Strada di Chinatown" loading="lazy">
+        <img src="assets/img/viaggio-10.jpg" alt="Casa su palafitte sull'oceano" loading="lazy">
+        <img src="assets/img/viaggio-11.jpg" alt="Pontile verso il paese sulla collina" loading="lazy">
+        <img src="assets/img/viaggio-12.jpg" alt="Spiaggia vista da un pontile" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- PERCORSO -->
+  <section id="percorso">
+    <div class="wrap">
+      <div class="reveal">
+        <span class="label">Percorso</span>
+        <h2 class="display">Dieci anni <span class="out">sul campo</span></h2>
+      </div>
+
+      <article class="featured reveal">
+        <div>
+          <p class="when mono">2015 — oggi</p>
+          <h3 class="display">VTN Europe</h3>
+          <p class="role mono">Brand &amp; Communication Manager</p>
+          <div class="chips mono"><span class="chip">Brand</span><span class="chip">Social</span><span class="chip">Eventi</span><span class="chip">PR</span><span class="chip">Team creativo</span></div>
+        </div>
+        <ul>
+          <li><strong>Comunicazione aziendale e brand identity</strong>, con la coerenza del brand su ogni canale.</li>
+          <li><strong>Social media</strong> (Instagram @vtneurope) e <strong>reputazione aziendale</strong>.</li>
+          <li>Rapporti con <strong>giornalisti, agenzie e fotografi</strong>.</li>
+          <li>Organizzazione di <strong>fiere ed eventi</strong>.</li>
+          <li>Coordinamento del <strong>team grafico</strong> e dei collaboratori esterni, briefing creativi e materiali per le campagne.</li>
+        </ul>
+      </article>
+
+      <div class="past">
+        <article class="reveal"><p class="when mono">2014 — 2017</p><h4>Giacomello Foto</h4><span class="role mono">Fotografa</span><p>Fotografia sportiva in tempo reale, post-produzione e archivio.</p></article>
+        <article class="reveal"><p class="when mono">2014</p><h4>Fotodolomiti</h4><span class="role mono">Fotografa</span><p>Gare ed eventi sulle piste di San Martino di Castrozza.</p></article>
+        <article class="reveal"><p class="when mono">2013</p><h4>Leodari Pubblicità</h4><span class="role mono">Stage graphic designer</span><p>Grafica per la pubblicità outdoor, dall'idea al file esecutivo.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPETENZE -->
+  <section id="competenze" style="background: var(--white-2)">
+    <div class="wrap">
+      <div class="reveal">
+        <span class="label">Competenze</span>
+        <h2 class="display">La parte <span class="out">strategica</span><br>della creatività</h2>
+      </div>
+      <div class="skills">
+        <div class="skill reveal"><p class="n mono"><span>01</span><span>✺</span></p><h3>Comunicazione aziendale</h3><p>Dalla voce del brand alla relazione quotidiana con le persone.</p></div>
+        <div class="skill reveal"><p class="n mono"><span>02</span><span>✺</span></p><h3>Branding</h3><p>Identità coerenti e riconoscibili su ogni touchpoint.</p></div>
+        <div class="skill reveal"><p class="n mono"><span>03</span><span>✺</span></p><h3>Social &amp; content</h3><p>Contenuti pensati per essere utili prima che belli.</p></div>
+        <div class="skill reveal"><p class="n mono"><span>04</span><span>✺</span></p><h3>Visual design</h3><p>Visual ADV, campagne, materiali di vendita e illustrazione.</p></div>
+        <div class="skill reveal"><p class="n mono"><span>05</span><span>✺</span></p><h3>AI per la comunicazione</h3><p>Immagini e contenuti con strumenti AI, integrati nel flusso creativo.</p></div>
+        <div class="skill reveal"><p class="n mono"><span>06</span><span>✺</span></p><h3>Eventi &amp; coordinamento</h3><p>Fiere, eventi e team allineati verso la stessa idea.</p></div>
+      </div>
+      <div class="tools reveal">
+        <span class="tool">Photoshop</span><span class="tool">Illustrator</span><span class="tool">Lightroom</span><span class="tool">Figma</span><span class="tool">Canva</span><span class="tool">Salesforce CRM</span><span class="tool">Office</span><span class="tool ai">✺ AI per immagini e contenuti</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMAZIONE -->
+  <section id="formazione">
+    <div class="wrap">
+      <div class="reveal">
+        <span class="label">Formazione</span>
+        <h2 class="display">Sempre <span class="out">in corso</span></h2>
+      </div>
+      <div class="edu">
+        <div class="reveal">
+          <h3 class="mono">Studi</h3>
+          <div class="row"><span class="when mono">2024 — oggi</span><div><strong>Scienze della Comunicazione</strong><span>Università degli Studi di Verona</span></div></div>
+          <div class="row"><span class="when mono">2024</span><div><strong>UX Design Master</strong><span>Talent Garden · Milano</span></div></div>
+          <div class="row"><span class="when mono">2013</span><div><strong>Diploma in Comunicazione Pubblicitaria e Fotografia</strong><span>Istituto Tecnico B. Montagna · Vicenza</span></div></div>
+        </div>
+        <div class="reveal">
+          <h3 class="mono">Certificazioni</h3>
+          <div class="row"><span class="when mono">Set 2025</span><div><strong>Creare contenuti con l'AI</strong><span>Cegos · Milano</span></div></div>
+          <div class="row"><span class="when mono">Giu 2025</span><div><strong>L'AI per il marketing e la comunicazione</strong><span>Cegos · Milano</span></div></div>
+          <div class="row"><span class="when mono">2025</span><div><strong>AI Skills LAB</strong><span>Talent Garden</span></div></div>
+          <div class="row"><span class="when mono">2024</span><div><strong>Il Piano di Comunicazione integrata</strong><span>Cegos · Milano</span></div></div>
+          <div class="row"><span class="when mono">2023</span><div><strong>Neuroselling</strong><span>Cegos · Milano</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATTI -->
+  <section id="contatti" class="dark contact">
+    <div class="wrap reveal">
+      <span class="label">Contatti</span>
+      <h2 class="display">Contatti</h2>
+      <p class="intro">Per contattarmi via email:</p>
+      <a class="mail" href="mailto:imgiusiorlando@gmail.com">imgiusiorlando@gmail.com</a>
+      <div class="actions">
+        <a class="btn btn-acid" href="mailto:imgiusiorlando@gmail.com">Scrivimi una mail</a>
+        <a class="btn btn-ghost" href="assets/Giusi_Orlando_CV.pdf" download>Scarica il CV ↓</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/giusi-orlando" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </div>
+    <div class="end">
+      <div class="wrap">
+        <span class="sig"><i>Giusi</i>Orlando</span>
+        <a class="mono" href="#top">Torna su ↑</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+<script>
+  // Header border on scroll
+  const header = document.getElementById('header');
+  addEventListener('scroll', () => header.classList.toggle('scrolled', scrollY > 10), { passive: true });
+
+  // Mobile menu
+  const btn = document.getElementById('menuBtn'), menu = document.getElementById('menu');
+  const setMenu = open => { menu.classList.toggle('open', open); btn.setAttribute('aria-expanded', open); btn.textContent = open ? '✕' : '☰'; };
+  btn.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+  // Reveal on scroll
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(entries => entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    }), { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+  }
+</script>
+</body>
+</html>
